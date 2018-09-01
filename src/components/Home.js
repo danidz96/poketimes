@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom'
+import Pokeball from '../pokeball.png';
 
 
 export default class Home extends Component {
@@ -21,9 +22,10 @@ export default class Home extends Component {
         const postList = posts.length ? (
             posts.map(post => (
                 <div className="post card" key={post.id}>
+                    <img src={Pokeball} alt="pokeball"/>
                     <div className="card-content">
                         <Link to={'/' + post.id}>
-                            <span className="card-title">{post.title}</span>
+                            <span className="card-title blue-text">{post.title}</span>
                         </Link>
                         <p>{post.body}</p>
                     </div>
@@ -33,7 +35,7 @@ export default class Home extends Component {
             <div className="center">No posts yet</div>
         );
         return (
-            <div className="container">
+            <div className="container home">
                 <h4 className="center">Home</h4>
                 {postList}
             </div>
