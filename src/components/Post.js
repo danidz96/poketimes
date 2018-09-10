@@ -12,7 +12,7 @@ class Post extends Component {
             <div className="post">
                 <h4 className="center">{this.props.post.title}</h4>
                 <p>{this.props.post.body}</p>
-                <button className="btn red" onClick={this.handleDeleteClick}>X</button>
+                <button className="btn-floating btn-large red" onClick={this.handleDeleteClick}>X</button>
             </div>
         ) : (
             <div className="center">Loading post...</div>
